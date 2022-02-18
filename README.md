@@ -6,7 +6,9 @@ Solution to Puzzl Intern Challenge to create Rock Paper Scissors game
 
 ### Tasks ###
 [x] 1. Create an interface that presents a user with the game options and allows them to select one
+
 [x] 2. The user should be able to select an option and submit it to a game engine for processing
+
 [x] 3. Display the result to the user
 
 ### Execution ###
