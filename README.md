@@ -22,9 +22,6 @@ Solution to Puzzl Intern Challenge to create Rock Paper Scissors game.
 python3 game_cli.py
 ~~~~
 
-### Dependencies ###
-* venv
-
 ### Code review ###
 * Tips, suggestions and help is always appreciated.
 

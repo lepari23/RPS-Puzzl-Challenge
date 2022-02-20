@@ -1,4 +1,4 @@
-import pygame
+import tkinter
 
 valid_chars = ['0', '1', '2', 'R', 'P', 'S', 'r', 'p', 's']
 moves = ['Rock', 'Paper', 'Scissors']
