@@ -11,9 +11,9 @@ Solution to Puzzl Intern Challenge to create Rock Paper Scissors game.
 
 - [x] 3. Display the result to the user
 
-- [] 4. Maketh GUI
+- [ ] 4. Maketh GUI
 
-- [] 5. Add hard mode
+- [ ] 5. Add hard mode
 
 
 ### Execution ###
