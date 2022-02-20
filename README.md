@@ -1,6 +1,6 @@
 # RPS-Puzzl-Challenge #
 
-Solution to Puzzl Intern Challenge to create Rock Paper Scissors game
+Solution to Puzzl Intern Challenge to create Rock Paper Scissors game.
 
 ## General ##
 
@@ -11,10 +11,15 @@ Solution to Puzzl Intern Challenge to create Rock Paper Scissors game
 
 - [x] 3. Display the result to the user
 
+- [] 4. Maketh GUI
+
+- [] 5. Add hard mode
+
+
 ### Execution ###
 
 ~~~~
-python3 game.py
+python3 game_cli.py
 ~~~~
 
 ### Dependencies ###
@@ -34,3 +39,4 @@ python3 game.py
 * Resources:
   * https://gist.github.com/jono-booth/8fc7c6cf6f1fe6d1c073e3e24bdcfbd1
   * https://www.python.org/dev/peps/pep-0008/
+  * https://arstechnica.com/science/2014/05/win-at-rock-paper-scissors-by-knowing-thy-opponent/

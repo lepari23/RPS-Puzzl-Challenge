@@ -1,1 +1,5 @@
 # None, I am showing all my working :)
+
+# actually I'll skip the gimp files too
+*.xcf
+*.pdf
