@@ -1,4 +1,6 @@
-import tkinter
+from tkinter import *
+
+gui = gui.init_gui()
 
 valid_chars = ['0', '1', '2', 'R', 'P', 'S', 'r', 'p', 's']
 moves = ['Rock', 'Paper', 'Scissors']
@@ -18,11 +20,6 @@ def main():
     evaluate(user_move, comp_move)
 
     refresh_gui()
-
-
-def init_gui():
-    # begin loop, wait for input
-    print()
 
 
 def generate_move():
@@ -70,11 +67,6 @@ def evaluate(user, comp):
 
 def check_score():
     # run while both scores are less than 3
-
-
-# To be called whenever an image or value needs updating
-def refresh_gui():
-    print("Refresh")
 
 
 if __name__ == '__main__':
