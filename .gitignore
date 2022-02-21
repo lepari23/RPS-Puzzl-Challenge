@@ -3,3 +3,6 @@
 # actually I'll skip the gimp files too
 *.xcf
 *.pdf
+
+# and most of venv can be hidden
+venv/

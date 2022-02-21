@@ -15,6 +15,8 @@ Solution to Puzzl Intern Challenge to create Rock Paper Scissors game.
 
 - [ ] 5. Add hard mode
 
+- [ ] 6. Program Flow
+
 
 ## CommandLine Game ##
 
@@ -26,12 +28,20 @@ python3 game_cli.py
 
 ## GUI Game ##
 
+### Installation ###
+
 ~~~~
-sudo python3 setup.py (Not setup yet lol)
+sudo python3 setup.py //(Not setup yet lol)
 ~~~~
 
 ~~~~
 sudo apt-get install python3-tk
+~~~~
+
+### Execution ###
+
+~~~~
+python3 game_gui.py
 ~~~~
 
 

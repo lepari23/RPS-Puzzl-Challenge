@@ -1,73 +1,116 @@
+# Import module
 from tkinter import *
 
-gui = gui.init_gui()
 
-valid_chars = ['0', '1', '2', 'R', 'P', 'S', 'r', 'p', 's']
-moves = ['Rock', 'Paper', 'Scissors']
-hard_mode = False
-player, comp = 0, 0
-moves_log = []
-round = 0
 
+START_PAGE = "./images/pages/start_page.png"
+MAIN_PAGE = "./images/pages/main_page.png"
+GAME_OVER = "./images/pages/game_over.png"
+HELP_PAGE = "./I didn't make a help page"
+global _START_PAGE, _MAIN_PAGE, _HELP_PAGE, _GAME_OVER, _SINGLE, _EASY
+global pscore, cscore
+global scene
+global root
+
+# ^ entirely superfluous naming and redup. yuck
 
 def main():
 
-    comp_move = generate_move()
-    user_move = get_input()
-    moves_log.append(user_move)
-    moves_log.append(comp_move)
+    root = Tk()
+    root.geometry("830x585")
 
-    evaluate(user_move, comp_move)
+    scene = PhotoImage(file=START_PAGE)
+    label1 = Label(root, image=scene)
+    label1.place(x=0, y=0)
 
-    refresh_gui()
-
-
-def generate_move():
-    if hard_mode:
-
-        print("hard_mode")
-
-        # simple winning algo:
-        # let P be the last move of the player
-        # let X' be the successor to X
-        # thus P = R', S = P', R = S'
-        # Next move of computer = C
-        # C = X''
-        # This just follows the one-ahead principle
-
-        return 0
-
-    else:
-
-        return int(random.choice(valid_chars[0:3]))
+    start_game()
+    root.bind("<Button-1>", leftclick)
+    root.resizable(False, False)
+    root.mainloop()
 
 
-# modify to return True when R/P/S is clicked
-def get_input():
-    return False
+def start_game():
+
+    _START_PAGE = True
+    _MAIN_PAGE, _GAME_OVER, _HELP_PAGE = False, False, False
+    _SINGLE, _EASY = False, False
+    pscore, cscore = 0, 0
+    print("*"*5000)
 
 
-def evaluate(user, comp):
-
-    if user == comp:
-        print("DRAW_TEXT")
-
-    elif user == 0 and comp == 2:
-        print("WIN_TEXT")
-
-    elif user == 2 and comp == 0:
-        print("LOSE_TEXT")
-
-    elif user > comp:
-        print("WIN_TEXT")
-
-    else:
-        print("LOSE_TEXT")
 
 
-def check_score():
-    # run while both scores are less than 3
+
+# The only action listener, using conditionals to direct flow
+def leftclick(event):
+
+    print("clicked at {}:{}".format(event.x, event.y))
+    execute(event.x, event.y)
 
 
-if __name__ == '__main__':
+# executes if anything, was clicked... zoinks, inefficient tho
+def execute(x, y):
+
+    # most of the clicks will be on the main page
+    if _MAIN_PAGE:
+
+        if 130 < x < 220 and 420 < y < 520:
+
+            print("rock")
+
+        elif 370 < x < 495 and 420 < y < 530:
+
+            print("paper")
+
+        elif 620 < x < 750 and 420 < y < 530:
+
+            print("scissors")
+
+    elif _START_PAGE:
+
+        if 600 < x < 800 and 75 < y < 100:
+
+            print("singleround")
+
+        elif 600 < x < 800 and 110 < y < 140:
+
+            print("best of three")
+
+        elif 720 < x < 800 and 175 < y < 205:
+
+            print("easy mode")
+
+        elif 720 < x < 800 and 210 < y < 240:
+
+            print("hard mode")
+
+        elif 265 < x < 390 and 495 < y < 550:
+
+            print("play")
+
+
+        elif 455 < x < 590 and 495 < y < 550:
+
+            exit()
+
+        elif 675 < x < 800 and 255 < y < 290:
+
+            print("help")
+
+    elif _GAME_OVER:
+
+        if 30 < x < 150 and 205 < y < 260:
+
+            print("replay (go back to start)")
+            init_gui()
+
+        elif 220 < x < 355 and 210 < y < 270:
+
+            exit()
+
+
+
+
+
+if __name__ == "__main__":
     main()

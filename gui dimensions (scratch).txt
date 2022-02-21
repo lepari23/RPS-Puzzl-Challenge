@@ -1,0 +1,42 @@
+GUI scratch:
+    Start page:
+        single round:
+            600 < x < 800
+            75 < y < 100
+        best of three:
+            600 < x < 800
+            110 < y < 140
+        easy:
+            720 < x < 800
+            175 < y < 205
+        hard:
+            720 < x < 800
+            210 < y < 240
+        play:
+            265 < x < 390
+            495 < y < 550
+        exit:
+            455 < x < 590
+            495 < y < 550
+        help:
+            675 < x < 800
+            255 < y < 290
+
+    main page:
+        rock:
+            130 < x < 220
+            420 < y < 520
+        paper:
+            370 < x < 495
+            420 < y < 530
+        scissors:
+            620 < x < 750
+            420 < y < 530
+
+    game over: 400x290
+        replay:
+            30 < x < 150
+            205 < y < 260
+        exit:
+            220 < x < 355
+            210 < y < 270
